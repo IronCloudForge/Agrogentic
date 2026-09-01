@@ -1,6 +1,6 @@
 # USDA Agentic AI Governance Architecture
 
-This repository is the working library for USDA's Agentic AI Risk Management and Governance Architecture, developed in support of the USDA-AI BPEGS Agentic Working Group. It holds the architecturally-significant requirements (ASRs), the decisions made against them (ADRs), and the reference material that grounds both.
+This is an independent, volunteer-run open-source research project. It is not sponsored, reviewed, sanctioned, or endorsed by the U.S. Department of Agriculture or any federal agency. Nothing in this repository represents official USDA policy, guidance, or an authorized architecture. It is published in the hope that governance patterns developed here may be useful to the broader public-sector and open-source community.
 
 ## Start here
 
