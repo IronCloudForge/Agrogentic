@@ -1,2 +1,1 @@
-# policy-as-code
-Compliance automation for federal cloud environments. Policy as Code · OSCAL · FedRAMP · NIST 800-53
+This is an independent, volunteer-run open-source research project. It is not sponsored, reviewed, sanctioned, or endorsed by the U.S. Department of Agriculture or any federal agency. Nothing in this repository represents official USDA policy, guidance, or an authorized architecture. It is published in the hope that governance patterns developed here may be useful to the broader public-sector and open-source community.
