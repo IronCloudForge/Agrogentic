@@ -4,7 +4,7 @@ A title-only backlog, organized by architecture layer and cross-cutting concern.
 
 See `Layer-Model.md` for the four-layer documentation model. Every ASR drafted from this catalog must carry a Layer-4 Family tag (AI, CLOUD, ON-PREM, or CROSS-CUTTING) in its Driver field, per the current ASR-Template.md, and should include a Corpus evidence section if a Layer-3 industry source genuinely corroborates it.
 
-Five ASRs and one ADR already exist and are marked **(drafted)**. Everything else is **(proposed)** — a title and nothing more, ready to be picked up, split, merged, or dropped as the working group sees fit.
+As of this backlog-drafting pass, 26 of 26 ASRs and 12 of 22 ADRs are **Drafted**. The remaining ADRs are **Proposed** — a title and nothing more, deliberately left undrafted where no genuine Layer-3 precedent existed to ground a decision on, rather than forced. One entry, ADR-003, is marked **Absorbed** — see "Using this catalog" below. Every row is ready to be picked up, split, merged, or dropped as the working group sees fit; a title here is a placeholder, not a commitment.
 
 ---
 
@@ -138,7 +138,8 @@ Five ASRs and one ADR already exist and are marked **(drafted)**. Everything els
 
 ## Using this catalog
 
-- **Drafted** entries are already in the ASR Log / ADR Log and can be cited today.
+- **Drafted** entries are already written and in `ASR-Log.md` / `ADR-Log.md` — but every one of them carries a `Status` field of its own (currently `Draft` across the board), and that field, not this catalog, is the current word on where it stands. Read the document itself before treating it as settled.
 - **Proposed** entries are titles only — claiming one means drafting the full ASR or ADR (using the templates) and moving it into the Log with a Status of its own, including a Family tag per Layer-Model.md.
-- Numbering is sequential across the whole catalog, not per category, so an ID always identifies exactly one entry regardless of where it ends up living.
+- **Absorbed into ADR-YYY** means this entry's title described the same architectural decision as another catalog entry that was drafted under a different number — rather than draft a near-duplicate, the decision lives at ADR-YYY and this row stays in the catalog, marked accordingly, so the ID isn't silently dropped or reused.
+- Numbering is sequential across the whole catalog, not per category, so an ID always identifies exactly one entry regardless of where it ends up living — including an absorbed one.
 - This catalog itself is not authoritative — the Logs are. Treat this as a backlog to work from, not a commitment already made.

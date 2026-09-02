@@ -1,6 +1,6 @@
 > **FOR INFORMATION ONLY.** Independent, unofficial research — not reviewed, approved, or warranted by anyone. Use at your own risk.
 
-# ADR-001: Autonomy is tiered, effective from this point forward
+# ADR-001: Autonomy is tiered per capability, from this point forward
 
 **Status:** Draft
 **Date:** 2026-08-31
@@ -43,3 +43,4 @@ A capability's tier may only be raised, not assumed by default, and raising a ti
 - 2026-08-31 — Added ASR traceability header; this ADR now formally traces to ASR-001 in the ASR Log.
 - 2026-08-31 — Aligned to the four-layer documentation model (see Layer-Model.md); ASR-001's Driver now carries the [AI] family tag. No change to the decision itself.
 - 2026-09-02 — Status corrected from Accepted to Draft. No Layer 1 authorizing instrument has signed off on this decision yet; "Accepted" in the Status field is reserved for that, per Layer-Model.md's directionality (Layer 2 compiles into Layer 1 once mature and accepted). No change to the decision itself.
+- 2026-09-02 — Title corrected from "Autonomy is tiered, effective from this point forward" to "Autonomy is tiered per capability, from this point forward," to match the wording already used in ADR-Log.md and ASR-ADR-Outline-Catalog.md since this ADR was first logged — a wording drift, not a change of decision; treated as non-substantive per CONTRIBUTING.md's own carve-out for markdown-link-level fixes.
