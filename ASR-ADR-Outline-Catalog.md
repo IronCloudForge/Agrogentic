@@ -14,10 +14,10 @@ Five ASRs and one ADR already exist and are marked **(drafted)**. Everything els
 | ID | Title | Status |
 |---|---|---|
 | ASR-001 | Governance model must support accelerated AI adoption without loss of risk management | Drafted |
-| ASR-006 | Autonomy tier promotion requires independently measured accuracy, not elapsed time or output plausibility | Proposed |
-| ASR-007 | A capability's autonomy tier must default to the lowest tier until explicitly raised | Proposed |
+| ASR-006 | Autonomy tier promotion requires independently measured accuracy, not elapsed time or output plausibility | Drafted |
+| ASR-007 | A capability's autonomy tier must default to the lowest tier until explicitly raised | Drafted |
 | ADR-001 | Autonomy is tiered per capability, from this point forward | Drafted |
-| ADR-002 | Autonomy tier promotion and demotion process | Proposed |
+| ADR-002 | Autonomy tier promotion and demotion process | Drafted |
 | ADR-003 | Kill-switch / interrupt authority at defined checkpoints in an agent's action chain | Proposed |
 
 ## 2. Agent identity & access

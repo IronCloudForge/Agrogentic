@@ -1,6 +1,8 @@
+> **FOR INFORMATION ONLY.** Independent, unofficial research — not reviewed, approved, or warranted by anyone. Use at your own risk.
+
 # ASR-002: Baseline governance directives must specify configuration-management and control-baseline requirements
 
-**Status:** Accepted
+**Status:** Draft
 **Date:** 2026-08-31
 **Driver:** [Family: CROSS-CUTTING] NIST SP 800-53 Rev 5 control families; NIST SP 800-128 (configuration management / CI schema)
 

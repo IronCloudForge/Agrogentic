@@ -1,6 +1,8 @@
+> **FOR INFORMATION ONLY.** Independent, unofficial research — not reviewed, approved, or warranted by anyone. Use at your own risk.
+
 # ASR-004: Agent input-ingestion structural fidelity must be independently verified before autonomous authority is granted
 
-**Status:** Accepted
+**Status:** Draft
 **Date:** 2026-08-31
 **Driver:** [Family: CROSS-CUTTING] General data-provenance and quality-assurance principles; applies to any document-ingesting agentic capability
 

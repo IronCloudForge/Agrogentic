@@ -1,3 +1,5 @@
+> **FOR INFORMATION ONLY.** Independent, unofficial research — not reviewed, approved, or warranted by anyone. Use at your own risk.
+
 # ASR-XXX: [Short requirement title]
 
 **Status:** Draft | Accepted | Superseded by ASR-YYY

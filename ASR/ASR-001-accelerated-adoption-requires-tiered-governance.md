@@ -1,6 +1,8 @@
+> **FOR INFORMATION ONLY.** Independent, unofficial research — not reviewed, approved, or warranted by anyone. Use at your own risk.
+
 # ASR-001: Governance model must support accelerated AI adoption without loss of risk management
 
-**Status:** Accepted
+**Status:** Draft
 **Date:** 2026-08-31
 **Driver:** [Family: AI] OMB M-25-21 ("Accelerating Federal Use of AI through Innovation, Governance, and Public Trust"); EO 14179
 

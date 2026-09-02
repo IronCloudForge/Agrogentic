@@ -7,7 +7,7 @@ This is an independent, volunteer-run open-source research project. It is not sp
 If you're new to this repository, read in this order:
 
 1. **`Layer-Model.md`** — the four-layer model everything else in this repo is organized around. Read this first; every other document assumes it.
-2. **`ASR/ASR-Log.md`** and **`ADR/ADR-Log.md`** — the current, authoritative index of every accepted requirement and decision. These are the source of truth; everything else supports them.
+2. **`ASR/ASR-Log.md`** and **`ADR/ADR-Log.md`** — the current, authoritative index of every requirement and decision drafted so far, and their status. These are the source of truth; everything else supports them.
 3. **`Knowledge-Source-References.md`** — the standing, tiered catalog of Layer 3 external sources (OWASP, MITRE, Uber, Microsoft, CSA, and others) that ASRs cite as `Corpus evidence`. Every such citation in this repo traces back to an entry here. Local archives of the cataloged sources themselves live in `Knowledge-Sources/`, organized by the same tiers.
 4. **`Research-to-Governance-Crosswalk.md`** — if you're coming from a research or scientific background rather than a governance/architecture one, this maps the vocabulary you already know onto the vocabulary this repo uses.
 5. **`ASR-ADR-Outline-Catalog.md`** — the backlog. Titled but undrafted ASRs and ADRs, organized by architecture layer, for anyone looking for where to contribute next.
@@ -40,18 +40,23 @@ Research-to-Governance-Crosswalk.md                     Research-vocabulary <-> 
 Knowledge-Source-References.md                          Tiered catalog of Layer 3 external sources cited as Corpus evidence
 
 ASR/                                                    Architecturally-Significant Requirements
-  ASR-Log.md                                              Index of all accepted ASRs
+  README.md                                               Folder disclaimer and orientation
+  ASR-Log.md                                              Index of all ASRs and their current status
   ASR-Template.md                                         Template for drafting a new ASR
   ASR-001-accelerated-adoption-requires-tiered-governance.md
   ASR-002-baseline-directive-specificity.md
   ASR-003-architectural-intent-compliance-alignment.md
   ASR-004-structural-fidelity-verification.md
   ASR-005-agent-identity-scoped-entitlement.md
+  ASR-006-autonomy-promotion-requires-measured-accuracy.md
+  ASR-007-autonomy-tier-default-lowest.md
 
 ADR/                                                    Architecture Decision Records
-  ADR-Log.md                                              Index of all accepted ADRs
+  README.md                                               Folder disclaimer and orientation
+  ADR-Log.md                                              Index of all ADRs and their current status
   ADR-Template.md                                         Template for drafting a new ADR
   ADR-001-autonomy-tiering.md
+  ADR-002-autonomy-tier-promotion-demotion-process.md
 
 Knowledge-Sources/                                      Local archives of the cataloged Layer 3 sources, by tier
   Tier-1/                                                  Institutional or vendor-backed sources

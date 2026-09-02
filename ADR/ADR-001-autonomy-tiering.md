@@ -1,6 +1,8 @@
+> **FOR INFORMATION ONLY.** Independent, unofficial research — not reviewed, approved, or warranted by anyone. Use at your own risk.
+
 # ADR-001: Autonomy is tiered, effective from this point forward
 
-**Status:** Accepted
+**Status:** Draft
 **Date:** 2026-08-31
 **Traces to:** ASR-001
 
@@ -40,3 +42,4 @@ A capability's tier may only be raised, not assumed by default, and raising a ti
 - 2026-08-31 — Added Policy context section addressing the shift from a risk-averse to an accelerate-adoption federal AI policy posture.
 - 2026-08-31 — Added ASR traceability header; this ADR now formally traces to ASR-001 in the ASR Log.
 - 2026-08-31 — Aligned to the four-layer documentation model (see Layer-Model.md); ASR-001's Driver now carries the [AI] family tag. No change to the decision itself.
+- 2026-09-02 — Status corrected from Accepted to Draft. No Layer 1 authorizing instrument has signed off on this decision yet; "Accepted" in the Status field is reserved for that, per Layer-Model.md's directionality (Layer 2 compiles into Layer 1 once mature and accepted). No change to the decision itself.

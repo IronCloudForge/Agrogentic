@@ -1,6 +1,8 @@
+> **FOR INFORMATION ONLY.** Independent, unofficial research — not reviewed, approved, or warranted by anyone. Use at your own risk.
+
 # ASR-005: Agent identity must be its own scoped entity, never inherited from an invoking user, service account, or integrated system
 
-**Status:** Accepted
+**Status:** Draft
 **Date:** 2026-08-31
 **Driver:** [Family: CROSS-CUTTING] NIST SP 800-207 (Zero Trust); AC-17 boundary-consistency principle (generalized)
 

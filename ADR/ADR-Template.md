@@ -1,3 +1,5 @@
+> **FOR INFORMATION ONLY.** Independent, unofficial research — not reviewed, approved, or warranted by anyone. Use at your own risk.
+
 # ADR-XXX: [Decision title]
 
 **Status:** Proposed | Accepted | Superseded by ADR-YYY
