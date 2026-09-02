@@ -42,32 +42,29 @@ ASR-ADR-Outline-Catalog.md                              Backlog of titled-but-un
 Research-to-Governance-Crosswalk.md                     Research-vocabulary <-> governance-vocabulary crosswalk
 Knowledge-Source-References.md                          Tiered catalog of Layer 3 external sources cited as Corpus evidence
 
-ASR/                                                    Architecturally-Significant Requirements
+ASR/                                                    Architecturally-Significant Requirements (26 drafted — ASR-Log.md is the current, authoritative list)
   README.md                                               Folder disclaimer and orientation
   ASR-Log.md                                              Index of all ASRs and their current status
   ASR-Template.md                                         Template for drafting a new ASR
-  ASR-001-accelerated-adoption-requires-tiered-governance.md
-  ASR-002-baseline-directive-specificity.md
-  ASR-003-architectural-intent-compliance-alignment.md
-  ASR-004-structural-fidelity-verification.md
-  ASR-005-agent-identity-scoped-entitlement.md
-  ASR-006-autonomy-promotion-requires-measured-accuracy.md
-  ASR-007-autonomy-tier-default-lowest.md
+  ASR-001-...md through ASR-026-...md                     One file per requirement — see ASR-Log.md, not this tree, for the current count and titles
 
-ADR/                                                    Architecture Decision Records
+ADR/                                                    Architecture Decision Records (12 drafted — ADR-Log.md is the current, authoritative list)
   README.md                                               Folder disclaimer and orientation
   ADR-Log.md                                              Index of all ADRs and their current status
   ADR-Template.md                                         Template for drafting a new ADR
-  ADR-001-autonomy-tiering.md
-  ADR-002-autonomy-tier-promotion-demotion-process.md
+  ADR-001-...md through ADR-021-...md                     One file per decision — see ADR-Log.md, not this tree, for the current count and titles
 
 Knowledge-Sources/                                      Local archives of the cataloged Layer 3 sources, by tier
-  Tier-1/                                                  Institutional or vendor-backed sources
-  Tier-2/                                                  Credible research or production evidence
+  Tier-1/                                                  Institutional or vendor-backed sources (7)
+  Tier-2/                                                  Credible research or production evidence (5)
   Tier-3/                                                  Reserved — not yet built out
+
+Handover-Prompts/                                       Phase-by-phase drafting checkpoints — what was drafted, what was skipped and why, kept as an audit trail
 
 .github/                                                 Issue/PR templates for proposing ASRs and ADRs
 ```
+
+Individual ASR/ADR filenames are intentionally not enumerated above — with 38 documents and growing, a hand-maintained list here would drift out of sync again the next time one is drafted, which is exactly what happened before this note was added. `ASR-Log.md` and `ADR-Log.md` are the source of truth for what exists; this tree only maps the repo's shape.
 
 ## How to contribute
 
