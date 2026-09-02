@@ -75,6 +75,10 @@ Individual ASR/ADR filenames are intentionally not enumerated above — with 38 
 
 See `CONTRIBUTING.md` for the full contribution workflow, and `CODE_OF_CONDUCT.md` for how discussion here is expected to go.
 
+## License
+
+Documentation and content — every ASR, ADR, and everything else in this repository except source code — is licensed under **CC BY-SA 4.0**. Any source code added in the future (none exists as of this writing) is licensed separately under **Apache License 2.0**. See `LICENSE.md` for the full explanation and rationale.
+
 ## A note on sourcing discipline
 
 Every claim in this library should be traceable: a Layer-4 citation for authority, and where applicable, a direct link to a Layer-3 source for corroboration — a GitHub repository, a paper, a standards-body publication — rather than an unlinked assertion. The goal is that any entry in this library can be independently verified by a reader with no prior context on this project, tracing every claim back to either a federal standard or a reproducible external source.
