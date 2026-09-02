@@ -4,7 +4,9 @@ This is an independent, volunteer-run open-source research project. It is not sp
 
 ## Start here
 
-If you're new to this repository, read in this order:
+If you're a domain-expert volunteer here to review content rather than write code, start with **`REVIEWERS.md`** instead — a shorter, review-focused entry point covering what to check and where the real gaps are.
+
+Everyone else, read in this order:
 
 1. **`Layer-Model.md`** — the four-layer model everything else in this repo is organized around. Read this first; every other document assumes it.
 2. **`ASR/ASR-Log.md`** and **`ADR/ADR-Log.md`** — the current, authoritative index of every requirement and decision drafted so far, and their status. These are the source of truth; everything else supports them.
@@ -35,6 +37,7 @@ An **Architecture Decision Record**: a dated record of one specific decision mad
 
 ```
 Layer-Model.md                                         Four-layer model and Family tag reference — read first
+REVIEWERS.md                                            Entry point for domain-expert reviewers, not contributors
 ASR-ADR-Outline-Catalog.md                              Backlog of titled-but-undrafted ASRs/ADRs, by architecture layer
 Research-to-Governance-Crosswalk.md                     Research-vocabulary <-> governance-vocabulary crosswalk
 Knowledge-Source-References.md                          Tiered catalog of Layer 3 external sources cited as Corpus evidence
