@@ -1,4 +1,4 @@
-# Engineering Long-Horizon Work with LLM Agents - author - Paul Zedeck, CISSP-CCSP
+# Engineering Long-Horizon Work with LLM Agents
 
 ## A Project-Control Architecture for Durable, Traceable, and Verifiable AI Collaboration
 
@@ -15,7 +15,7 @@
 
 Large language model (LLM) agents are increasingly used as collaborators on work that extends far beyond a single prompt or chat session. The central engineering problem is not simply whether a model has a large enough context window. It is whether a system can preserve **correct project state, evidence, decisions, dependencies, and acceptance criteria** across many bounded model invocations without allowing information to drift.
 
-Research on long-context LLMs shows that larger context windows do not guarantee reliable use of all information in context. *Lost in the Middle* demonstrated sensitivity to the position of relevant information in long inputs (https://cs.stanford.edu/~nfliu/papers/lost-in-the-middle.arxiv2023.pdf).[1] RULER found that performance often falls as context length and task complexity increase, even when nominal context limits are much larger.[2] LongMemEval found substantial degradation in long-term memory tasks across sustained interaction histories and framed long-term memory as an indexing, retrieval, and reading problem rather than a simple matter of retaining an ever-growing transcript.[3] More recent work on long-horizon software agents identifies append-only context and passive compression as sources of context growth, semantic drift, and degraded reasoning.[4]
+Research on long-context LLMs shows that larger context windows do not guarantee reliable use of all information in context. *Lost in the Middle* demonstrated sensitivity to the position of relevant information in long inputs.[1] RULER found that performance often falls as context length and task complexity increase, even when nominal context limits are much larger.[2] LongMemEval found substantial degradation in long-term memory tasks across sustained interaction histories and framed long-term memory as an indexing, retrieval, and reading problem rather than a simple matter of retaining an ever-growing transcript.[3] More recent work on long-horizon software agents identifies append-only context and passive compression as sources of context growth, semantic drift, and degraded reasoning.[4]
 
 Industry experiments with long-running agents point in the same direction. Anthropic reported that compaction alone was insufficient for reliable work across many context windows and used incremental tasks plus structured artifacts to transfer state between sessions.[5] Later work added explicit planner, generator, and evaluator roles, again emphasizing task decomposition, structured handoffs, and independent evaluation.[6]
 
@@ -425,4 +425,110 @@ flowchart LR
 
 Under this model, conversation is a **user interface to structured project state**.
 
-The transcript can still be retained for audit, reconstruction, or usability, but requirements, d
+The transcript can still be retained for audit, reconstruction, or usability, but requirements, decisions, source evidence, acceptance status, and dependencies live in explicit project objects.
+
+---
+
+## 14. Implementation-neutral component mapping
+
+APCP does not prescribe one technology stack. A practical implementation could map responsibilities to existing tool classes:
+
+| APCP responsibility | Possible implementation class |
+|---|---|
+| Project baseline | Version-controlled documents or requirements repository |
+| Work breakdown | Issue tracker, graph database, structured YAML/JSON, project-management system |
+| Dependency graph | DAG/workflow representation or requirements graph |
+| Evidence store | Document repository, object storage, database, version control |
+| Provenance | Source metadata, immutable IDs, hashes, citations |
+| Context assembly | Retrieval layer plus explicit context-building service |
+| Agent execution | Any suitable LLM/agent framework |
+| Runtime persistence | Durable workflow engine or checkpointing framework |
+| Verification | Tests, evaluators, policy engines, independent models, human review |
+| Audit | Version history, traces, workflow history, decision records |
+
+Existing frameworks provide useful pieces—checkpointing, state serialization, durable execution, tool orchestration, session persistence—but APCP treats those as implementation mechanisms beneath a broader project-control and assurance model.[10][11][12][13][14]
+
+---
+
+## 15. What the evidence supports—and what it does not
+
+| Proposition | Assessment |
+|---|---|
+| A raw conversation transcript is a weak sole source of truth for multi-session projects | **Strongly supported by long-context and long-term-memory evidence** |
+| Larger context windows eliminate long-horizon reliability problems | **Not supported** |
+| Memory/retrieval mechanisms can improve continuity | **Supported** |
+| Structured context management is preferable to unlimited append-only history | **Supported by emerging research** |
+| Long-running work benefits from decomposition and structured handoffs | **Supported by agent-harness experiments and established project practice** |
+| Durable execution is useful for long waits and failure recovery | **Supported** |
+| Requirements and outputs should be traceable to evidence | **Strongly supported by systems-engineering practice; especially important for assurance** |
+| Independent evaluation can improve confidence in generated work | **Supported as an emerging agent pattern and consistent with verification practice** |
+| One current agent framework completely solves multi-month project assurance | **No such conclusion is supported by the cited evidence** |
+| APCP itself is an established standard | **No. APCP is the synthesis proposed in this article.** |
+
+---
+
+## 16. Design principle
+
+The architecture can be reduced to one principle:
+
+> **An LLM agent should not have to remember the project. The project environment should reconstruct the correct local state for the agent.**
+
+Instead of attempting to create one AI collaborator that must correctly remember months of evolving work, build an environment in which a capable agent can:
+
+1. enter with little or no conversational memory;
+2. retrieve an explicit work-unit contract;
+3. receive the relevant authoritative context;
+4. perform a bounded piece of work;
+5. produce an artifact and provenance;
+6. undergo verification;
+7. commit accepted results to durable project state; and
+8. leave the next work unit in a well-defined condition.
+
+That design is more resilient to context limits, model replacement, provider changes, session loss, summarization errors, project pauses, and heterogeneous agent teams.
+
+---
+
+## Conclusion
+
+Long-horizon agentic work is fundamentally a **systems-engineering and project-control problem**, not only a model-context problem.
+
+Modern LLMs can perform substantial reasoning and production work inside bounded contexts. The challenge is preserving correctness across those contexts as a project accumulates state over time. Research increasingly favors explicit context management, structured artifacts, decomposition, persistence, and evaluation over the assumption that a sufficiently long transcript will remain a reliable source of truth.[3][4][5][6]
+
+A defensible long-running agent architecture therefore separates:
+
+- **reasoning** from **memory**,
+- **memory** from **project state**,
+- **project state** from **primary evidence**,
+- **workflow durability** from **information correctness**, and
+- **candidate output** from **accepted project state**.
+
+The proposed Agentic Project Control Plane is one way to combine those disciplines into a coherent architecture.
+
+Its core rule is intentionally simple:
+
+> **The agent is replaceable. The project state is durable, traceable, and verifiable.**
+
+---
+
+# References
+
+1. Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., & Liang, P. (2024). **Lost in the Middle: How Language Models Use Long Contexts.** *Transactions of the Association for Computational Linguistics, 12*, 157–173. https://aclanthology.org/2024.tacl-1.9/  
+2. Hsieh, C.-P., Sun, S., Kriman, S., Acharya, S., Rekesh, D., Jia, F., Zhang, Y., & Ginsburg, B. (2024). **RULER: What's the Real Context Size of Your Long-Context Language Models?** https://arxiv.org/abs/2404.06654  
+3. Wu, D., Wang, H., Yu, W., Zhang, Y., Chang, K.-W., & Yu, D. (2025). **LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory.** *ICLR 2025*. https://proceedings.iclr.cc/paper_files/paper/2025/hash/d813d324dbf0598bbdc9c8e79740ed01-Abstract-Conference.html  
+4. Liu, S., Jiang, B., Yang, J., Li, Y., Guo, J., Liu, X., & Dai, B. (2026). **Context as a Tool: Context Management for Long-Horizon SWE-Agents.** *Findings of ACL 2026*, 20604–20617. https://aclanthology.org/2026.findings-acl.1032/  
+5. Young, J. / Anthropic. (2025). **Effective Harnesses for Long-Running Agents.** https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents  
+6. Rajasekaran, P. / Anthropic. (2026). **Harness Design for Long-Running Application Development.** https://www.anthropic.com/engineering/harness-design-long-running-apps  
+7. National Institute of Standards and Technology. (2024). **Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1).** https://doi.org/10.6028/NIST.AI.600-1  
+8. Project Management Institute. (2026). **PMI Lexicon of Project Management Terms, Version 5.0.** See definitions for *work breakdown structure* and *work package*. https://www.pmi.org/-/media/pmi/documents/registered/pdf/pmbok-standards/pmi-lexicon-pm-terms.pdf  
+9. NASA Software Engineering Handbook. **SWE-052 — Bidirectional Traceability.** https://swehb.nasa.gov/spaces/SWEHBVD/pages/102695427/SWE-052+-+Bidirectional+Traceability  
+10. Temporal Technologies. **Durable Execution / Long-Running Workflows.** https://temporal.io/  
+11. Dapr. **Dapr Documentation — Durable Execution for Workflows and AI Agents.** https://docs.dapr.io/  
+12. OpenAI. **Agents SDK — Running Agents: Durable Execution Integrations and Human-in-the-Loop.** https://openai.github.io/openai-agents-python/running_agents/  
+13. LangChain. **LangGraph Persistence.** https://docs.langchain.com/oss/python/langgraph/persistence  
+14. Microsoft. **AutoGen — Managing State.** https://microsoft.github.io/autogen/dev/user-guide/agentchat-user-guide/tutorial/state.html  
+
+---
+
+## Suggested citation for this article
+
+> *Engineering Long-Horizon Work with LLM Agents: A Project-Control Architecture for Durable, Traceable, and Verifiable AI Collaboration.* Agrogentic project knowledge article, 2026. The Agentic Project Control Plane (APCP) is presented as a proposed research synthesis, not an established standard.
