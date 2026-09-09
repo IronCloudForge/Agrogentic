@@ -1,4 +1,4 @@
-# Engineering Long-Horizon Work with LLM Agents
+# Engineering Long-Horizon Work with LLM Agents - author - Paul Zedeck, CISSP-CCSP
 
 ## A Project-Control Architecture for Durable, Traceable, and Verifiable AI Collaboration
 
